@@ -19,8 +19,10 @@
     "socket.io": "^1.4.5"
   },
   "devDependencies": {
-    "gulp": "github:gulpjs/gulp#4.0",
-    "gulp-develop-server": "^0.5.1",
-    "gulp-notify": "^2.2.0"
+    "express": "^4.16.2",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-develop-server": "^0.5.2",
+    "gulp-notify": "^2.2.0",
+    "socket.io": "^1.7.4"
   }
 }

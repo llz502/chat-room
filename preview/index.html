@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+  .navbar{
+    position: relative;
+  }
+  .navbar .mask{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(109, 108, 108, 0.488);
+  }
+  .navbar img{
+    opacity: .5;
+    display: block;
+  }
+  .navbar h1{
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%,-50%);
+    color: #FFF;
+    text-align: center;
+    font-size: 46px;
+    text-shadow: 0 0 40px black;
+  }
+  .navbar h2{
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%,-50%);
+    color: #FFF;
+    text-align: center;
+    font-size: 27px;
+    text-shadow: 0 0 40px black;
+  }
+  .navbar .link{
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%,-50%);
+    color: #FFF;
+    text-align: center;
+    font-size: 23px;
+    text-shadow: 0 0 40px black;
+  }
+  .navbar a{
+    text-decoration: none;
+    color: #fff;
+    border-radius: 4px;
+    border: 1px solid #fff;
+  }
+  .content{
+    width: 66.7%;
+    margin: 0 auto;
+  }
+  .content h2{
+    margin: 30px 0 10px;
+    font-weight: 600;
+    font-size: 22px;
+    color: rgb(64, 64, 64);
+    line-height: 1.1;
+  }
+  .content p{
+    margin: 20px 0;
+    line-height: 2.5;
+    font-size: 16px;
+    color: #404040;
+  }
+  .content ul{
+    line-height: 2.5;
+    font-size: 16px;
+    color: #404040;
+    margin-left: 20px;
+  }
+  .content .function li{
+    margin-top: 30px;
+  }
+  .content .function img{
+    width: 600px;
+    display: block;
+    background: rgb(235, 60, 176);
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.493);
+  }
+  .content ul h3{
+    font-size: 16px;
+  }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <img src="./ChatRoom.png" alt="">
+    <div class="mask"></div>
+    <h1>Imitation_DisneyApp</h1>
+    <h2>作者：LiZhen Lin</h2>
+    <div class="link">
+      <a href="https://llz502.github.io/chat-room/public/index.html" target="__blank">项目</a>
+      <a href="https://github.com/llz502/chat-room" target="__blank">源码</a>
+    </div>
+  </div>
+  <div class="content">
+      <h2>为什么要做这个App</h2>
+      <p>
+        Node.js与express可以搭建服务器，我们一般访问网站都是使用HTTP协议，HTTP协议一般是单向通信，用来获取网页、图片、媒体资源等，在获取完资源后会断开连接。
+        如果是搭建一个聊天平台，则需要一直保持网络通信，让会话一直进行，Node.js提供Net模块，可以进行TCP协议，搭建服务器进行双向通信。
+        而socket.io模块，里面已经封装了依赖Net模块的一些方法函数来搭建服务器，进行双向通信。
+      </p>
+      <h2>项目功能</h2>
+      <div class="function">
+        <ul>
+          <li>
+            在登录网页版聊天室时，需要给自己设置临时昵称
+            <img src="ChatRoom-login.png" alt="">
+          </li>
+          <li>
+            登录聊天室后，系统会提示用户登录，并在左边显示登录的昵称，可以行多人对话
+            <img src="ChatRoom.png" alt="">
+          </li>
+          <li>
+            聊天室可以传输Base64图片
+            <img src="ChatRoom-file.png" alt="">
+          </li>
+        </ul>
+      </div>
+      <h2>JS net模块</h2>
+      <p>
+        <ul>
+          <li>TCP/IP------TCP/IP协议是传输层协议，主要解决数据如何在网络中传输</li>
+          <li>Socket------Socket是对TCP/IP协议的封装和应用（程序层面）</li>
+          <li>HTTP-------HTTP是应用层协议，主要解决如何包装数据</li>
+          <li>网络七层模型------物理层、数据链路层、网络层、传输层、会话层、表示层和应用层</li>
+        </ul>
+      </p>
+      <h2>目录结构</h2>
+      <p class="list">
+        <ul>
+          <li>
+            <h3>node_modules/</h3>使用npm下载模块
+          </li>
+          <li>
+            <h3>public/</h3>放置js、css、图片等文件
+          </li>
+        </ul>
+      </p>
+  </div>
+
+</body>
+</html>
